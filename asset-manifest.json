@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PassStrengthTester/static/css/main.c7f95764.css",
+    "main.js": "/PassStrengthTester/static/js/main.2730f341.js",
+    "static/js/787.d7345f9b.chunk.js": "/PassStrengthTester/static/js/787.d7345f9b.chunk.js",
+    "index.html": "/PassStrengthTester/index.html",
+    "main.c7f95764.css.map": "/PassStrengthTester/static/css/main.c7f95764.css.map",
+    "main.2730f341.js.map": "/PassStrengthTester/static/js/main.2730f341.js.map",
+    "787.d7345f9b.chunk.js.map": "/PassStrengthTester/static/js/787.d7345f9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7f95764.css",
+    "static/js/main.2730f341.js"
+  ]
+}
