@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { PiEyeClosedLight, PiEyeLight } from 'react-icons/pi';
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import cn from 'classnames';
+import { letterPattern, digitPattern, specialCharacterPattern } from '../../utils/patterns';
+import { success, error, warn } from '../../utils/notifications';
 import './passwordForm.scss';
 
 export const PasswordForm = () => {
@@ -12,10 +14,6 @@ export const PasswordForm = () => {
   const inputType = isVisible ? 'text' : 'password';
 
   const isValidLength = password.length >= 8;
-
-  const letterPattern = /[а-яА-ЯЁёa-zA-Z]/;
-  const digitPattern = /\d+/g;
-  const specialCharacterPattern = /[^a-zA-Zа-яА-ЯЁёА-ЩЬЮЯЄІЇҐа-щьюяєіїґ0-9\s]+/;
 
   const containsLetters = letterPattern.test(password);
   const containsDigits = digitPattern.test(password);
@@ -37,9 +35,6 @@ export const PasswordForm = () => {
   const isEasyPassword = password && !isStrongPassword && !isMediumPassword;
 
   const baseCn = 'pw-strength-bar__item';
-  const success = () => toast.success("Great! Your password is strong and secure.");
-  const warn = () => toast.warn("Your password could be stronger. Consider adding more complexity.");
-  const error = () => toast.error("Your password is weak. Please choose a stronger password.");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -61,16 +56,16 @@ export const PasswordForm = () => {
         <div className="pw-form__container">
           <input 
             type={inputType} 
-            name='password'
+            name="password"
             value={password}
             className="pw-form__input"
             onChange={(event) => setPassword(event.target.value.trim())}
           />
 
-          <button className="pw-form__button" type='button' onClick={() => setIsVisible(!isVisible)}>
+          <button className="pw-form__button" type="button" onClick={() => setIsVisible(!isVisible)}>
             {isVisible 
-              ? <PiEyeLight size={20} color={"rgb(60, 116, 213)"} />
-              : <PiEyeClosedLight size={20} color={"rgb(60, 116, 213)"} />
+              ? <PiEyeLight size={20} color={'rgb(60, 116, 213)'} />
+              : <PiEyeClosedLight size={20} color={'rgb(60, 116, 213)'} />
             }
           </button>
           <ToastContainer />

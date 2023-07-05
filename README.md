@@ -1,4 +1,4 @@
-# [DEMO](https://github.com/facebook/create-react-app).
+# [DEMO](https://AnyaLyaLya.github.io/PassStrengthTester).
 
 ## Technologies Used
 The application is built using the following technologies:
