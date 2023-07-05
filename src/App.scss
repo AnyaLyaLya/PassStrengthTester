@@ -1,0 +1,27 @@
+.pw-strength-tester {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+
+  &__container {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+
+    width: 450px;
+    height: 250px;
+    padding: 24px;
+
+    background-color: white;
+    border: 3px solid rgb(60, 116, 213);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px #87b2fc;
+  }
+
+  &__title {
+    color: rgb(60, 116, 213);
+  }
+}

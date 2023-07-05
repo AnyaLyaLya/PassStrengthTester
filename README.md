@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# [DEMO](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used
+The application is built using the following technologies:
 
-## Available Scripts
++ React: JavaScript library for building user interfaces
++ TypeScript: Superset of JavaScript that adds static typing
++ SCSS: CSS preprocessor for styling
++ react-icons: Library for including icons in React components
++ react-toastify: Library for displaying toast notifications
 
-In the project directory, you can run:
+## Functionality
+The application allows users to test the strength of a password. The following functionality is implemented:
 
-### `npm start`
+1. Password Strength Calculation:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    + If the password contains only letters, digits, or symbols, it is considered easy.
+    + If the password contains a combination of letters-symbols, letters-digits, or digits-symbols, it is considered medium.
+    + If the password contains letters, symbols, and numbers, it is considered strong.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Real-time Strength Updates:
 
-### `npm test`
+    + As the user types in the password field, the strength sections update in real time based on the password strength.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Password Strength Sections:
 
-### `npm run build`
+    + The application displays three sections to indicate the strength of the password.
+    + The color of the sections varies depending on the strength of the password:
+        + If the field is empty, all sections are gray.
+        + If the field has less than 8 characters, all sections are red.
+        + If the password is easy, the first section is red and the rest are gray.
+        + If the password is medium, the first two sections are yellow and the last one is gray.
+        + If the password is strong, all sections are green.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Password Visibility Toggle:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    + The application provides a button to toggle the visibility of the password in the input field.
+    + Clicking the button changes the input type from "password" to "text" and vice versa, allowing the user to view or hide the entered password.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Notifications:
 
-### `npm run eject`
+    + The application uses the react-toastify library to display toast notifications.
+    + Toast notifications are triggered based on the strength of the entered password.
+    + Three types of notifications are implemented:
+    + Success Notification: If the password is strong, a success notification is displayed with the message "Great! Your password is strong     + and secure."
+    + Warning Notification: If the password is medium, a warning notification is displayed with the message "Your password could be stronger.     + Consider adding more complexity."
+    + Error Notification: If the password is easy, an error notification is displayed with the message "Your password is weak. Please choose a stronger password."
+    + Notifications are shown for a brief period and then automatically dismissed.
+    + The notification appearance can be customized using CSS styles and animations.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+With the notification functionality, users receive immediate feedback about the strength of their password. They are informed whether their password is strong, medium, or weak, and can take appropriate action to enhance their password security.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Feel free to explore the application and observe the notifications as you test different passwords!
